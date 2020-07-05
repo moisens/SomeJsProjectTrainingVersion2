@@ -1,0 +1,21 @@
+// classList - shows/gets all classes
+// contains - checks classList for specific class
+// add - add class
+// remove - remove class
+// toggle - toggles class
+
+const navToggle = document.querySelector('.nav-toggle');
+const links = document.querySelector('.links');
+
+navToggle.addEventListener('click', function(){
+   // if(links.classList.contains('show-links')){ //If contains the class => true, if no => false
+   //    links.classList.remove('show-links');
+   // }else{
+   //    links.classList.add('show-links');
+
+   // }
+   // console.log(links.classList.contains('show-links'));
+   
+   //Shorter way to do that
+   links.classList.toggle('show-links');
+})
