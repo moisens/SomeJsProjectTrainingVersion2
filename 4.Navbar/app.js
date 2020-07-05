@@ -17,5 +17,5 @@ navToggle.addEventListener('click', function(){
    // console.log(links.classList.contains('show-links'));
    
    //Shorter way to do that
-   links.classList.toggle('show-links');
+   links.classList.toggle('show-links')
 })
