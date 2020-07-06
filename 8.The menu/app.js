@@ -130,22 +130,24 @@ const container = document.querySelector('.btn-container')
       `;
    }).join('');
    container.innerHTML = categoryBtns;
-   const filterBtns = document.querySelectorAll('.filter-btn');
 
+   const filterBtns = document.querySelectorAll('.filter-btn');
    //Filter Items
    filterBtns.forEach((btn) => {
       btn.addEventListener('click', function(e){
       const category = e.currentTarget.dataset.id;
       const menuCategory = menu.filter((menuItem) => {
-         //console.log(menuItem.category)
+         console.log(menuItem.category)
          if(menuItem.category === category){
             return menuItem;
          }
          
       });
       if(category === 'all'){
+         //Display All category
          displayMenuItems(menu);
       }else{
+         //Display a distinct category
          displayMenuItems(menuCategory)
       }
       });
