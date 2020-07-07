@@ -26,7 +26,7 @@ navToggle.addEventListener('click', function(){
 
 
 // ********** fixed navbar ************
-const navbar = document.querySelector('nav');
+const navbar = document.getElementById('nav');
 const topLink = document.querySelector('.top-link');
 
 window.addEventListener('scroll', function(){
