@@ -23,6 +23,38 @@ const init = async () => {
   
 }
 
+btnContainer.addEventListener('click', function(e){
+  //Handle the fact that if the user click outside the btn, nothing happens!
+  if (e.target.classList.contains('btn-container')) return;
+  //When user clic on btn.contains(page-btn), index is reasign!
+  if (e.target.classList.contains('page-btn')) {
+    index = parseInt(e.target.dataset.index);
+  }
+  //update setupUI by calling it here
+  setupUI();
+
+  //Handle the click on next btn
+  if (e.target.classList.contains('next-btn')) {
+    //Increment the index
+    index++;
+    //prevent error if index > pages.length
+    if (index > pages.length -1) {
+      index = 0;
+    }
+  }
+
+  //Handle the click on prev btn
+  if (e.target.classList.contains('prev-btn')) {
+    //decrement index
+    index--;
+    //prevent error if the index < page.length
+    if (index < 0) {
+      index = pages.length - 1;
+    }
+  }
+
+})
+
 window.addEventListener('load', init);
 
 
